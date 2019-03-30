@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+    <style>
+        .container {
+            width: 50%;
+            background-color: #f2f2f2;
+            border-style: double;
+        }
+
+        hr {
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <hr>
+            <h3 align="center">Prescription Form</h3>
+            <div class="row">
+                <img src="Assets/image/img1.png" />
+                <label class="required" for="name">Your name:</label>
+                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                <span id="name_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required" for="email">Your email:</label>
+                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                <span id="email_validation" class="error_message"></span>
+            </div>
+            <hr>
+            <hr>
+            <div class="row">
+                <label class="required">Prescription:</label></br>
+                <textarea id="message" class="input" name="message" rows="7" cols="50"></textarea><br />
+                <span id="message_validation" class="error_message"></span>
+            </div>
+
+            <input id="submit_button" type="submit" value="Send email" />
+        </form>
+    </div>
+</body>
+</html>

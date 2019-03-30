@@ -1,0 +1,41 @@
+﻿<html>
+<style>
+    .container {
+        width: 50%;
+        background-color: #f2f2f2;
+    }
+</style>
+<body>
+    <div class="container" ng-controller="PresCtrl">
+        <form ng-submit="SendData(pres)">
+            <div class="row">
+                <label class="required">From:</label>
+                <input id="name" class="input" name="from"  ng-model="pres.from"      type="text" value="" size="30" /><br />
+                <span id="name_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required">Password:</label>
+                <input id="email" class="input" name="password"  ng-model="pres.password"       type="text" value="" size="30" /><br />
+                <span id="email_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required">To:</label>
+                <input  class="input" name="to"   ng-model="pres.to" type="text" value="" size="30" /><br />
+                <span id="email_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required">Subject:</label>
+                <input  class="input" name="subject" ng-model="pres.subject" type="text" value="" size="30" /><br />
+                <span id="email_validation" class="error_message"></span>
+            </div>
+            <div class="row">
+                <label class="required" for="message">Body:</label>
+                <textarea  class="input" name="message" ng-model="pres.message" rows="7" cols="30"></textarea><br />
+                <span id="message_validation" class="error_message"></span>
+            </div>
+            
+            <input id="submit_button" type="submit" value="Send email" />
+        </form>
+    </div>
+</body>
+</html>

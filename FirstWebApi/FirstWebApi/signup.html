@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+    <title> Employee Data</title>
+    <script src="Scripts/angular.min.js"></script>
+
+</head>
+<body bgcolor="pink">
+    <div ng-controller="UserDataController">
+        <form ng-submit="SaveData(user)">
+            <h3> <p align="center">Membership Form </h3>   </p>
+            <table>
+                <p align="center">
+                  
+<tr>
+                    <th> MembershipType</th>
+                    <td>
+                        <select name="MembershipType_Id" ng-model="user.MembershipType_Id" size="1">
+                            <option value="1"> Individual Membership</option>
+                            <option value="2"> Individual Membership US LiveDoc Service</option>
+                            <option value="3"> Individual Membership BIH LiveDoc Service</option>
+                            <option value="4"> Employer</option>
+                            <option value="5"> Insurance Company</option>
+                            <option value="6"> Hospital-Staff</option>
+                            <option value="7"> Hospital-Doctor</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th> User Name</th>
+                    <td>
+                        <input type="text" name="UserName" ng-model="user.UserName" size="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th> First Name</th>
+                    <td>
+                        <input type="text" name="FirstName" ng-model="user.FirstName" size="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Last Name</th>
+                    <td>
+                        <input type="text" name="LastName" ng-model="user.LastName" size="20" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th> Company Name</th>
+                    <td>
+                        <input type="text" name="Company" ng-model="user.Company" >
+                    </td>
+                </tr>
+                <tr>
+                    <th> DOB</th>
+                    <td>
+                        <input type="date" name="DOB" ng-model="user.DOB" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Age</th>
+                    <td>
+                        <input type="text" name="Age" ng-model="user.Age" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <input type="text" name="Gender" ng-model="user.Gender" required>
+                    </td>
+                </tr>
+                <th>Address</th>
+                <td>
+                    <input type="text" name="Address" ng-model="user.Address" required>
+                </td>
+                </tr>
+                <th>Contact_no</th>
+                <td>
+                    <input type="text" name="Contact_no" ng-model="user.Contact_no" required>
+                </td>
+                </tr>
+                <tr>
+                    <th>Employer</th>
+                    <td>
+                        <input type="text" name="Employer" ng-model="user.Employer" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="text" name="Email" ng-model="user.Email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Insurance Company</th>
+                    <td>
+                        <input type="text" name="Insurance" ng-model="user.Insurance" required>
+                    </td>
+                </tr>
+                <tr>
+                    <th>License no</th>
+                    <td>
+                        <input type="text" name="License_no" ng-model="user.License_no" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th> Password</th>
+                    <td>
+                        <input type="password" name="Password" ng-model="user.Password" required>
+                    </td></th>
+               
+                <tr><td><p>This is membership terms and condition</p></td></tr>
+                <tr><td><input type="checkbox" name="cbBox" value="cbBox">Accept</td></tr>
+
+                </p>
+            </table>
+            <input type="submit" value="SAVE">
+        </form>
+</body>
+
+
+</html>
