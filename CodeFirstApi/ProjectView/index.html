@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html ng-app="DemoApp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/css/StyleSheet1.css" rel="stylesheet" />
+    <script src="Controller/Home/MyApp.js"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <div>
+
+            <a href="#!home">Home</a>
+            <a href="#!about">About</a>
+            <a href="#!signup">SignUp</a>
+            <a href="#!signin">Login</a>
+        </div>
+
+    </div>
+    <div class="button_one">
+        <a href="#!IndividualMembership"     class="btn btn-success" style="background-color:red;border-color:red">Individual Membership</a>
+        <a href="#!Employer"     class="btn btn-success " style="background-color:blue;border-color:blue">Employer</a>
+        <a href="#!Insurance"       class="btn btn-success" style="background-color:orchid;border-color:orchid">Insurance Company</a>
+        <a  href="#!Memberships"     class="btn btn-success" style="background-color:green;border-color:green">Memberships</a>
+        <a  href="#!Hospitals"      class="btn btn-success" style="background-color:orange;border-color:orange">Hospitals</a>
+        <a  href="#!HealthPlus"   class="btn btn-success" style="background-color:aqua;border-color:aqua">HealthPlus Support</a>
+        <a  href="#!LiveDoc"    class="btn btn-success" style="background-color:goldenrod;border-color:goldenrod">LiveDoc</a>
+
+    </div>
+    <div ng-view></div>
+
+
+   <div class="footer">
+       <h4>Copy Right</h4>
+   </div>
+</body>
+</html>

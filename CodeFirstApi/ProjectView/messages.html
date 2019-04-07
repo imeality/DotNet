@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .messages {
+            font-size: smaller;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            color: red;
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="messages">
+        <div ng-message="required">Required</div>
+        <div ng-message="minlength">Too short</div>
+        <div ng-message="maxlength">Too long</div>
+        <div ng-message="email">Invalid email address</div>
+        <div ng-message="compareTo">Must match the previous entry</div>
+    </div>
+</body>
+</html>

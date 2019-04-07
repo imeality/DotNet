@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="item_name" value="Object name">
+        <input type="hidden" name="business" value="cvanipowal25@gmail.com">
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="amount" value="47.47">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="return" value="http://localhost:53803/HtmlPage2.html">
+        <input type="hidden" name="notify_url" value="http://localhost:53803/HtmlPage2.html">
+        <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+</body>
+</html>

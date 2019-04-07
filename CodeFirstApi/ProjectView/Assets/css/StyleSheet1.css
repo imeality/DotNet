@@ -1,0 +1,61 @@
+﻿.button_one {
+    margin-top:25px;
+    text-align: center;
+}
+.header {
+    overflow: hidden;
+    background-color: #0020C2;
+    padding: 20px 10px;
+}
+
+    .header a {
+        float: right;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration:double;
+        font-size: 20px;
+        line-height: 25px;
+        border-radius: 4px;
+        
+    }
+
+
+.container {
+    margin-top: 50px;
+    margin-left: 50%;
+    margin: right:50%;
+    align: center;
+}
+
+
+    .header a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .header a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .btn-success{
+        background-color:red;
+        width:auto;
+        height:50px;
+
+    }
+
+
+.width-150px {
+    width: 150px;
+    display: inline-block;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0020C2;
+    color: white;
+    text-align: center;
+}

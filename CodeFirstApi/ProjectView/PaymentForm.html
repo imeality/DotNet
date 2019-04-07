@@ -1,0 +1,74 @@
+﻿<html>
+<head>
+    <link href="Assets/css/MembershipStyleSheet.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" id="contact">
+
+
+            <h3>Subscription Form</h3>
+
+            <label>Name On Card</label>
+
+            <input type="text" name="UserName" ng-model="user.UserName" size="20">
+
+
+            <label>Creditcard no. </label>
+
+            <input type="text" name="FirstName" ng-model="user.FirstName" size="20">
+
+            <label for="expmonth">Exp Month</label>
+            <select name=" " ng-model="user.MembershipType_Id" style="width:60px;height:auto; margin-top:8px; margin-bottom:20px;">
+                <option value="January"> January</option>
+                <option value="Feburary ">Feburary </option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Augast">Augast</option>
+                <option value="September">September</option>
+                <option value="Octomber">Octomber</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <label for="expmonth">Exp Year</label>
+            <select name="" ng-model="user.MembershipType_Id" style="width:60px;height:auto;margin-top:8px">
+                <option value="2017"> 2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020"> 2020</option>
+                <option value="2021">2021</option>
+            </select>
+
+            <br>
+            <label>CVV</label>
+
+            <input type="text" name="Insurance" ng-model="user.Insurance">
+
+            <label>Billing Address</label>
+
+            <input type="text" name="License_no" ng-model="user.License_no">
+        </form>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="item_name" value="Object name">
+            <input type="hidden" name="business" value="cvanipowal25@gmail.com">
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="amount" value="47.47">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="return" value="http://localhost:53803/HtmlPage2.html">
+            <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_cc_171x47.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+            <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+    </div>
+</body>
+</html>
