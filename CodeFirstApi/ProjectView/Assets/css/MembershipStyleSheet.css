@@ -26,7 +26,7 @@ body {
    
 }
 
-.container {
+.membership {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
@@ -47,6 +47,9 @@ body {
     padding: 25px;
     margin: 40px 0;
    
+}
+#contact input.ng-invalid {
+    border-color:red;
 }
 
     #contact h3 {
@@ -86,18 +89,6 @@ label {
     margin: 0 0 5px;
     padding: 10px;
 }
-
-    #contact input[type="text"]:hover,
-    #contact input[type="email"]:hover,
-    #contact input[type="date"]:hover,
-    #contact input[type="password"]:hover,
-    #contact select,
-    #contact textarea:hover {
-        -webkit-transition: border-color 0.3s ease-in-out;
-        -moz-transition: border-color 0.3s ease-in-out;
-        transition: border-color 0.3s ease-in-out;
-        border: 1px solid #aaa;
-    }
 
 
 #contact button[type="submit"] {

@@ -11,6 +11,8 @@ namespace CodeFirstApi.Models
         [Key]
         public int User_Id { get; set; }
         public int MembershipType_Id { get; set; }
+        [Required(ErrorMessage = "Please Enter Email Address")]
+
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

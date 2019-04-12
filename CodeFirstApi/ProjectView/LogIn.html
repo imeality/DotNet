@@ -1,0 +1,25 @@
+﻿
+<div class="membership" ng-controller="LogInDataController">
+    <form id="contact" ng-submit="ValidData(user)" name="MyForm">
+        <h3>LogIn Form</h3>
+
+        <label> User Name</label>
+
+        <input type="text" name="UserName" ng-model="user.UserName" size="20" required ng-maxlength="10">
+        <span class="require" ng-show="MyForm.UserName.$touched && myForm.UserName.$invalid">The name is required.</span>
+        <div class="custom-error" ng-show="MyForm.UserName.$error.maxlength">
+            User Name must be at most 10 character.
+        </div>
+
+        <label> Password</label>
+        <input type="password" name="Password" ng-model="user.Password" ng-maxlength="20" required><br>
+        <span class="require" ng-show="MyForm.Password.$touched && MyForm.Password.$invalid">Password is required.</span>
+        <div class="custom-error" ng-show="MyForm.Password.$error.pattern">
+            Password must at most 20 character .
+        </div>
+
+        <label>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" style="text-align:center">SignIn</button>
+        </label>
+    </form>
+</div>

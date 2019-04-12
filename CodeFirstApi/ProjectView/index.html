@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="DemoApp">
+<html ng-app="HealthPlusApp" >
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -7,19 +7,22 @@
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-messages.min.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/toaster.min.css" rel="stylesheet" />
     <link href="Assets/css/StyleSheet1.css" rel="stylesheet" />
+    <script src="Scripts/toaster.min.js"></script>
     <script src="Controller/Home/MyApp.js"></script>
-    
+
 </head>
-<body>
+<body >
     <div class="header">
         <div>
 
             <a href="#!home">Home</a>
             <a href="#!about">About</a>
             <a href="#!signup">SignUp</a>
-            <a href="#!signin">Login</a>
+            <a href="#!login">Login</a>
         </div>
 
     </div>
@@ -34,6 +37,7 @@
 
     </div>
     <div ng-view></div>
+
 
 
    <div class="footer">
