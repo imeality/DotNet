@@ -90,7 +90,6 @@ C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\obj\Debug\CodeFirstApi.pdb
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\System.Web.Cors.dll
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\System.Web.Http.Cors.dll
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\System.Web.Http.Cors.xml
-C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\obj\Debug\CodeFirstApi.csprojAssemblyReference.cache
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Cors.dll
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.dll
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Host.SystemWeb.dll
@@ -102,3 +101,4 @@ C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Cors.xml
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Security.xml
 C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\asus\source\repos\CodeFirstApi\CodeFirstApi\obj\Debug\CodeFirstApi.csprojAssemblyReference.cache

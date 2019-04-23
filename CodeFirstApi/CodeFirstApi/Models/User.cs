@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 
 namespace CodeFirstApi.Models
@@ -27,7 +28,7 @@ namespace CodeFirstApi.Models
         public string Insurance { get; set; }
         public string License_no { get; set; }
         public string Password { get; set; }
-        public int Status { get; set; } 
-
+        public int Status { get; set; }
+      //  public ClaimsIdentity UserEmailID { get; internal set; }
     }
 }

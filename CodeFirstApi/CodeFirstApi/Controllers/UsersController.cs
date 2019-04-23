@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mail;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using CodeFirstApi.Models;
@@ -16,6 +19,7 @@ namespace CodeFirstApi.Controllers
     public class UsersController : ApiController
     {
         private HealthPlusContext dbContext = new HealthPlusContext();
+        private object scope;
 
         // GET: 
         [HttpGet]     
@@ -28,17 +32,20 @@ namespace CodeFirstApi.Controllers
         [HttpGet]        
         public IHttpActionResult GetUserById(int id)
         {
-            User user = dbContext.Users.Find(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
+           
 
-            return Ok(user);
-        }
+        User user = dbContext.Users.Find(id);
+          if (user == null)
+          {
+              return NotFound();
+          }
 
-        // PUT: 
-        [HttpPut]         
+          return Ok(user);
+         
+    }
+
+    // PUT: 
+    [HttpPut]         
         public IHttpActionResult EditUser(int id, User user)
         {
             if (!ModelState.IsValid)
@@ -122,6 +129,49 @@ namespace CodeFirstApi.Controllers
             return Ok("Email Successfull");
           
         }
+        //AfterLogin
+        [HttpGet]
+        public IHttpActionResult GetUserDashBoard()
+        {
+           var identity = (ClaimsIdentity)User.Identity;
+          var roles = identity.Claims
+                        .Where(c => c.Type == ClaimTypes.Role)
+                        .Select(c => c.Value);
+
+            var email = identity.Claims
+                       .Where(c => c.Type == ClaimTypes.Email)
+                       .Select(c => c.Value);
+            var data = new ArrayList();
+            data.Add(identity.Name);
+            data.Add(roles);
+            data.Add(email);
+
+
+            return Ok(data);
+            //  return Ok("Name: " + identity.Name + "&Mid:" + string.Join(",", roles.ToList()) + "&Email:" + string.Join(",", email.ToList()));
+
+
+        }
+        //GetByName
+      [Route("api/Users/GetUserByName/{name}")]
+        public IQueryable<User> GetUserByName(string name)
+        {
+            return dbContext.Users
+                .Where(b => b.FirstName.Equals(name, StringComparison.OrdinalIgnoreCase));
+              
+        }
+        
+        //GetByEmail
+        [Route("api/Users/GetUserByEmail/{email}")]
+        public IQueryable<User> GetUserByEmail(string email)
+        {
+            return dbContext.Users
+                .Where(b => b.Email.Equals(email, StringComparison.CurrentCulture));
+
+        }
+
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -137,3 +187,17 @@ namespace CodeFirstApi.Controllers
         }
     }
 }
+/*
+    [HttpGet]
+        public IHttpActionResult GetUserDashBoard()
+        {
+            var identity = User.Identity;
+            string url = "http://localhost:53803/UserDashBoard.html";
+
+
+            System.Uri uri = new System.Uri(url);
+
+            return Redirect(uri);
+        }
+ */
+ 

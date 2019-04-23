@@ -13,17 +13,20 @@ namespace CodeFirstApi
             // Web API configuration and services
 
             // Web API routes
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+       //   EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
 
             // Web API routes
-            config.EnableCors(cors);
+        //    config.EnableCors(cors);
             config.MapHttpAttributeRoutes();
+         
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{Action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+           
+
             var json = config.Formatters.JsonFormatter;
             json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
             config.Formatters.Remove(config.Formatters.XmlFormatter);

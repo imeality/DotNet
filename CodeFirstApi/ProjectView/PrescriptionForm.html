@@ -1,0 +1,25 @@
+﻿<div class="membership" ng-controller="sendprescriptionctrl">
+
+  
+    <form id="contact" ng-submit="SaveData()" name="MyForm">
+        <h3>Prescription Form</h3>
+        <label>From</label>
+        <input type="text" name="from_Prescription" ng-model="from_Prescription" value="default" required>
+       
+        <label>To</label>
+        <input type="email" name="To_Prescription" ng-model="To_Prescription" ng-pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/" required>
+        <span class="require" ng-show="MyForm.Email.$touched && MyForm.Email.$invalid">Email is required.</span>
+        <div class="custom-error" ng-show="MyForm.Email.$error.pattern">
+            Email must be valid.
+        </div>
+        <label>Prescription</label>
+        <textarea rows="8" cols="50" ng-model="Prescription_Info" name="Prescription_Info"></textarea>
+        <span class="require" ng-show="MyForm.prescription.$touched && MyForm.prescription.$invalid">Email is required.</span>
+
+        <label>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </label>
+    </form>
+    </div>
+
+

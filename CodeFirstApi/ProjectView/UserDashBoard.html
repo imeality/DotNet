@@ -1,16 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.min.js"></script>
-
-</head>
-<body>
+﻿
+<div ng-controller="UserDashBoardController">
+    <h4>Welcome {{name}}</h4> 
     <div class="row">
-        <div class="col-sm-6" >LiveDoc Screen</div>
-        <div class="col-sm-6" >
+        <div class="col-sm-6">LiveDoc Screen</div>
+        <div class="col-sm-6">
             <h3 style="text-align:center">What I can do here</h3>
             <p>*When a member needs to use live medical consultation services from a docto online.</p>
             <p>*LiveDoc services avilable for 24/7/365.</p>
@@ -23,14 +16,12 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="w3-container">
-                <a href="#!createprescription" class="btn btn-success" style="background-color:red;border-color:red">Create Prescription</a>
-                <a href="#!sendprescription" class="btn btn-success " style="background-color:blue;border-color:blue">Send Prescription</a>
-                <a href="#!printprescription" class="btn btn-success" style="background-color:orchid;border-color:orchid">Print Prescription</a>
-                
-               
+                <button ng-click="open()" ng-show="{{Mid}} == '7'" class="btn btn-success" style="background-color:red;border-color:red">Create Prescription</button>
+                <a href="#!sendprescription" ng-show="{{Mid}} == '7'" class="btn btn-success " style="background-color:blue;border-color:blue">Send Prescription</a>
+                <button ng-click="contactopen()"  class="btn btn-success" style="background-color:red;border-color:red">Contact-Us</button>
+
             </div>
         </div>
 
-        </div>
-</body>
-</html>
+    </div>
+</div>

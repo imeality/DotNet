@@ -26,10 +26,12 @@ namespace TokenBased.Models
                     context.SetError("invalid_grant", "Provided username and password is incorrect");
                     return;
                 }
-                var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-             //   identity.AddClaim(new Claim(ClaimTypes.Role, user.UserRoles));
+                var identity = new ClaimsIdentity(context.Options.AuthenticationType);           
                 identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
-             //  identity.AddClaim(new Claim("Email", user.UserEmailID));
+                identity.AddClaim(new Claim(ClaimTypes.Role, user.MembershipType_Id.ToString()));
+                //  identity.AddClaim(new Claim("MembershipType_Id", user.MembershipType_Id.ToString()));
+
+                  identity.AddClaim(new Claim(ClaimTypes.Email, user.Email.ToString()));
 
                 context.Validated(identity);
             }

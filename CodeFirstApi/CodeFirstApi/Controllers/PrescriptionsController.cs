@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Web.Http;
 using System.Web.Http.Description;
 using CodeFirstApi.Models;
@@ -106,6 +107,33 @@ namespace CodeFirstApi.Controllers
             return Ok(prescription);
         }
 
+        //Email Prescription
+        [HttpPost]
+        public IHttpActionResult SendPrescription(Prescription prescription)
+        {
+
+            MailMessage msg = new MailMessage();
+            msg.From = new MailAddress("cvaniporwal@gmail.com");
+            msg.To.Add(prescription.To_Prescription);
+            msg.Subject = "Prescription";
+            msg.Body =prescription.Prescription_Info.ToString();
+            msg.IsBodyHtml = true;
+            SmtpClient smt = new SmtpClient();
+            smt.Host = "smtp.gmail.com";
+            System.Net.NetworkCredential ntwd = new NetworkCredential();
+            ntwd.UserName ="cvaniporwal@gmail.com";   
+            ntwd.Password = "25july1997";   
+            smt.UseDefaultCredentials = true;
+            smt.Credentials = ntwd;
+            smt.Port = 587;
+
+            smt.EnableSsl = true;
+            smt.Send(msg);
+            return Ok("Email Successfull");
+
+        }
+
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing)

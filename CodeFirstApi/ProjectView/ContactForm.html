@@ -1,0 +1,20 @@
+﻿<div class="membership" ng-controller="contactctrl">
+
+
+    <form id="contact" ng-submit="SaveData()" name="MyForm" style="background-color:blue">
+        <h3>Contact Form</h3>
+        <label>Name</label>
+        <input type="text" name="Name" ng-model="Name" value="default" required>
+        <label>Email Address</label>
+        <input type="email" name="From_Contact" ng-model="From_Contact" value="default" required>
+       
+        <label>Message</label>
+        <textarea rows="8" cols="50" ng-model="Message" name="Message"></textarea>
+        <span class="require" ng-show="MyForm.prescription.$touched && MyForm.prescription.$invalid">Email is required.</span>
+
+        <label>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </label>
+    </form>
+</div>
+</div>
